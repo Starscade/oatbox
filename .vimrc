@@ -3,6 +3,7 @@ colorscheme blue
 set autoindent
 set autoread
 set clipboard+=unnamedplus " NeoVIM
+set fileformats=unix
 set laststatus=0 " NeoVIM
 set lcs+=space:_
 set list
