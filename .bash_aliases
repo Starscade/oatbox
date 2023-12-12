@@ -3,6 +3,7 @@ PS1="\\[\033[1;7m\\] \w \\[\033[0m\\] "
 
 export PATH
 
+unalias ll
 ll(){
 	if [ -z "$1" ]; then
 		_1="."
