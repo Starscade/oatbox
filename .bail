@@ -3,6 +3,13 @@ PS1="\\[\033[1;7m\\] \w \\[\033[0m\\] "
 
 export PATH
 
+lex(){
+	if [ $(wc -l "$1") -gt $LINES ]; then
+		cat "$1" | less -X
+	else
+		cat "$1"
+	fi
+}
 unalias ll
 ll(){
 	if [ -z "$1" ]; then
@@ -11,13 +18,22 @@ ll(){
 		_1="$1"
 	fi
 	if [ -f "$_1" ]; then
-		less "$_1"
+		if [ $(cat "$1" | wc -l) -gt $LINES ]; then
+			less -X "$_1"
+		else
+			cat "$_1"
+		fi
 	else
-		ls -AFGHhl --color=never --group-directories-first "$_1" | tail -n+2 | less -X
+		_ll=$(ls -AFGHhl --color=never --group-directories-first "$_1" | tail -n+2)
+		if [ $("$_ll" | wc -l) -gt $LINES ]; then
+			echo -e "$_ll" | less -X
+		else
+			echo -e "$_ll"
+		fi
 	fi
 }
 
-alias bail="wget -O ~/.bash_aliases https://raw.githubusercontent.com/Starscade/oatbox/main/.bash_aliases && source ~/.bash_aliases"
+alias bail="wget -O ~/.bail https://raw.githubusercontent.com/Starscade/oatbox/main/.bail && source ~/.bail"
 alias cc="sudo cp -iv"
 alias e="vi"
 alias instol="sudo apt install"
