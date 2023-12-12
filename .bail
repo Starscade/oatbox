@@ -3,13 +3,6 @@ PS1="\\[\033[1;7m\\] \w \\[\033[0m\\] "
 
 export PATH
 
-lex(){
-	if [ $(wc -l "$1") -gt $LINES ]; then
-		cat "$1" | less -X
-	else
-		cat "$1"
-	fi
-}
 unalias ll
 ll(){
 	if [ -z "$1" ]; then
@@ -18,7 +11,7 @@ ll(){
 		_1="$1"
 	fi
 	if [ -f "$_1" ]; then
-		if [ $(cat "$1" | wc -l) -gt $LINES ]; then
+		if [ $(cat "$_1" | wc -l) -gt $LINES ]; then
 			less -X "$_1"
 		else
 			cat "$_1"
