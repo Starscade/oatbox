@@ -1,4 +1,4 @@
-colorscheme darkblue
+colorscheme blue
 
 set autoindent
 set autoread
