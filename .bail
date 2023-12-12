@@ -25,7 +25,7 @@ ll(){
 		fi
 	else
 		_ll=$(ls -AFGHhl --color=never --group-directories-first "$_1" | tail -n+2)
-		if [ $("$_ll" | wc -l) -gt $LINES ]; then
+		if [ $(echo -e "$_ll" | wc -l) -gt $LINES ]; then
 			echo -e "$_ll" | less -X
 		else
 			echo -e "$_ll"
