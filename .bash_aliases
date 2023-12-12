@@ -16,7 +16,7 @@ ll(){
 	fi
 }
 
-alias bail="wget -P ~/ https://raw.githubusercontent.com/Starscade/oatbox/main/.bash_aliases -O .bash_aliases && src"
+alias bail="wget -P ~/ https://raw.githubusercontent.com/Starscade/oatbox/main/.bash_aliases -O ~/.bash_aliases && source ~/.bash_aliases"
 alias cc="sudo cp -iv"
 alias e="vi"
 alias instol="sudo apt install"
