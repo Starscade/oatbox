@@ -41,7 +41,7 @@ alias rr="sudo rm -Irv"
 alias src="source ~/.bash_aliases"
 alias swim="sudo vi"
 alias targ="tar -xvf"
-alias up="sudo apt update && sudo apt upgrade -y"
+alias up="sudo apt update && sudo apt upgrade -y && sudo apt autoremove --purge -y"
 alias wd="cd"
 alias xx="chmod +x"
 
