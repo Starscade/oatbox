@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"oncontextmenu="return false">
+	<head>
+		<meta charset="utf-8">
+		<meta name="theme-color"content="Black">
+		<meta name="viewport"content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
+		<link rel="icon"href="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+		<title>⬥</title>
+		<style>
+			@keyframes fay{
+				from{
+					opacity:0;
+				}
+			}
+			::-webkit-scrollbar{
+				height:var(--pad);
+				width:var(--pad);
+			}::-webkit-scrollbar-track{
+				background-color:transparent;
+			}::-webkit-scrollbar-thumb{
+				background-color:var(--fg);
+				border:calc(var(--pad)/3) solid var(--bg);
+				border-radius:var(--rad);
+			}
+			::selection{
+				background-color:var(--fg);
+				color:var(--bg);
+			}
+			:root{
+				--ax:DodgerBlue;
+				--bg:Black;
+				--fg:White;
+				--pt:18pt;
+				--pad:1rem;
+				--rad:calc(var(--pad)/2);
+				--bord:calc(.1*var(--pad)) solid;
+				--shado:0 0 var(--pad) Black;
+				background:var(--bg);
+				color:var(--fg);
+				font-family:sans-serif;
+				font-size:var(--pt);
+				text-align:center;
+				user-select:none;
+			}
+			body{
+				margin:0;
+			}
+			main{
+        align-items:center;
+        animation:fay 1s ease-in-out;
+				display:flex;
+				flex-direction:column;
+				justify-content:center;
+				height:100vh;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<article>HEL0</article>
+		</main>
+		<script>
+			'use strict'
+			const art=document.getElementsByTagName('article')[0]
+		</script>
+	</body>
+</html>
